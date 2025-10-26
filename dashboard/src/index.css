@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 12px;
+    border: 2px solid rgba(30, 41, 59, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    border-radius: 12px;
+    border: 2px solid rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 rgba(15, 23, 42, 0.5);
+}
+
+.my-scroll-container {
+    overflow-y: auto;
+}
+
+.my-scroll-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.my-scroll-container::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.my-scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 8px;
+}
+
+.my-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    /* glass-like background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    outline: none;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
+.search-input:focus {
+    border: 1px solid #60a5fa;
+    box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+
+
+.status-btn {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 110px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.status-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+:root {
+    --color-background: #0f0f0f;
+    --color-primary: #00447c;
+    --color-primary-hover: #008cff;
+    --color-secondary: #3e7eb3;
+    --color-text: #9ca3af;
+    --color-subtext: #9ca3af;
+    --color-negative-red: #962e2e;
+    --color-negative-red-hover: #ff0000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+}
+
+.gate-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+}
+
+.gate-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.gate-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px;
+}
+
+.gate-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-primary-hover);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.gate-subtitle {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 35px;
+}
+
+.gate-input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.gate-input-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.gate-input-group input {
+    width: 100%;
+    padding-left: 15px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.gate-input-group input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.gate-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--color-primary-hover);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gate-btn:hover {
+    opacity: 0.5;
+    background: var(--color-secondary);
+}
+
+.gate-footer {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.gate-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gate-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/********************************************************* DASHBOARD *********************************************************/
+
+
+
+.admin-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.admin-sidebar {
+    width: 300px;
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    z-index: 2;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.admin-sidebar h2 {
+    color: #60a5fa;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar li {
+    padding: 14px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #cbd5e1;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.admin-sidebar li:hover {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3), rgba(16, 185, 129, 0.3));
+    color: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.admin-sidebar .active {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3), rgba(16, 185, 129, 0.3));
+    color: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.admin-tab-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    color: #183e8b;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admins-tab-active .admin-tab-btn {
+    color: #3b82f6;
+    font-weight: 600;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.admin-tab-btn:hover {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.admin-tab-arrow {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.2s ease;
+}
+
+.admins-tab-active .admin-tab-arrow {
+    filter: invert(39%) sepia(91%) saturate(748%) hue-rotate(193deg) brightness(97%) contrast(107%);
+}
+
+.admin-main {
+    flex: 1;
+    padding-inline: 25px;
+    background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 80%);
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    backdrop-filter: blur(15px);
+}
+
+.admin-section h2 {
+    color: #60a5fa;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 14px;
+}
+
+.admin-table th {
+    color: #94a3b8;
+}
+
+.admin-table tr td {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.admin-table tr:not(.expanded-row):hover td {
+    transform: translateX(15px);
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 7px 12px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 5px;
+    transition: 0.2s;
+}
+
+.admin-ban-btn {
+    background: #f59e0b;
+}
+
+.admin-terminate-btn {
+    width: 100px;
+    background: var(--color-negative-red);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.admin-terminate-btn:hover {
+    background: var(--color-negative-red-hover);
+}
+
+
+.admin-notify-btn {
+    width: 100px;
+    background: var(--color-primary);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    margin-left: 15px;
+}
+
+.admin-notify-btn:hover {
+    background: var(--color-primary-hover);
+}
+
+
+.admin-approve-btn {
+    background: #10b981;
+}
+
+.admin-reject-btn {
+    background: var(--color-negative-red-hover);
+}
+
+.admin-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.admin-logout-btn {
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.2s;
+    background: var(--color-negative-red);
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.admin-logout-btn:hover {
+    background: var(--color-negative-red-hover);
+}
+
+
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.expanded-row {
+    border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+    cursor: default;
+}
+
+.expanded-row:hover {
+    background-color: transparent !important;
+}
+
+.admin-details h4 {
+    margin: 0 0 15px 0;
+    color: #3b82f6;
+    font-size: 16px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.detail-item {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid #3b82f6;
+}
+
+.detail-item strong {
+    color: #3b82f6;
+    margin-right: 8px;
+}
+
+
+/* Header with sticky add button */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Add New Admin Button */
+.add-admin-btn {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.add-admin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Action buttons container */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+    background: rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Terminate Button */
+.terminate-btn {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.terminate-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Prevent row click when clicking buttons */
+.action-buttons button {
+    pointer-events: auto;
+}
+
+/* Ensure the entire row is still clickable except for buttons */
+tr {
+    cursor: pointer;
+}
+
+tr .action-buttons {
+    cursor: default;
+}
+
+.edit-admin-btn:hover {
+    background: rgba(59, 130, 246, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+.terminate-admin-btn:hover {
+    background: rgba(239, 68, 68, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+.restore-admin-btn:hover {
+    background:  rgba(16, 185, 129, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+.expanded-actions button {
+    transition: all 0.2s ease;
+}
