@@ -1,5 +1,13 @@
 🏋️‍♂️ Kratos Hub
-
+2 Videos inside the app one from PC's perspective and 1 from phone's perspective
+Note that these 2 videos take place at exactly the same time
+=================================================
+PC POV
+https://www.youtube.com/watch?v=jZxcvqL52Zo
+==============================================
+PHONE POV
+https://www.youtube.com/watch?v=moty_2PTq0E
+============================================
 Kratos Hub is an all-in-one fitness management app that helps users take control of their training, nutrition, and overall health.
 It combines intelligent tracking, smart advice, and a clean design to help you stay disciplined, consistent, and in shape.
 
